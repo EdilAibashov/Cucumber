@@ -1,7 +1,6 @@
 package testData;
 
 import com.github.javafaker.Faker;
-import pages.CouponPage;
 
 import java.util.Locale;
 
@@ -63,9 +62,9 @@ public class CouponInfo {
     public void createCoupon() {
         setPercentage("17");
         setMaxUses("5");
-        setStartDate("01/24/2020");
-        setExpDate("02/20/2020");
-        setCouponNum(faker.number().digits(7));
+        setStartDate("Chas");
+        setExpDate("30/01/2020");
+        setCouponNum(faker.name().firstName());
     }
 }
 

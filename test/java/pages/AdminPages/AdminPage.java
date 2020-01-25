@@ -1,4 +1,4 @@
-package pages;
+package pages.AdminPages;
 //Scenarios:
 //        1. Login to admin page and verify title
 //           login : admin@phptravels.com
@@ -39,59 +39,15 @@ public class AdminPage {
     public AdminPage(){
         PageFactory.initElements(driver, this);
     }
-    @FindBy(xpath = "(//input[@name='email'])[1]")
-    public static WebElement userNameClick;
 
     @FindBy(xpath = "(//input[@name='email'])[1]")
     public static WebElement userName;
-
-    @FindBy(xpath = "//input[@name='password']")
-    public static WebElement passwordClick;
-
     @FindBy(xpath = "//input[@name='password']")
     public static WebElement password;
-
     @FindBy(xpath = "//button[@class='btn btn-primary btn-block ladda-button fadeIn animated btn-lg']")
     public static WebElement signIn_Btn;
-
     @FindBy(xpath = "//a[.=' Coupons']")
     public static WebElement couponPage;
-
-    @FindBy(xpath = "//button[.=' Add']")
-    public static WebElement Add_Btn;
-
-    @FindBy(xpath = "(//input[@id='rate'])[1]")
-    public static WebElement Percentage;
-
-    @FindBy(xpath = "(//input[@id='max'])[1]")
-    public static WebElement MaxUses;
-
-    @FindBy(xpath = "(//input[@name='startdate'])[1]")
-    public static WebElement StartDate;
-
-    @FindBy(xpath = "(//td[@class='day  active'])[1]")
-    public static WebElement St_click;
-
-    @FindBy(xpath = "(//td[.='29'])[28]")
-    public static WebElement Exp_click;
-
-    @FindBy(xpath = "(//input[@name='expdate'])[1]")
-    public static WebElement ExpDate;
-
-    @FindBy(xpath = "(//input[@value='tours'])[1]")
-    public static WebElement allTours;
-
-    @FindBy(xpath = "(//input[@value='cars'])[1]")
-    public static WebElement allCars;
-
-    @FindBy(xpath = "//input[@id='codeadd']")
-    public static WebElement couponNum;
-
-    @FindBy(xpath = "//button[@id='add']")
-    public static WebElement Creat_Btn;
-
-    @FindBy(xpath = "//button[@class='btn btn-primary submitcoupon']")
-    public static WebElement Submit_Btn;
 
 
     public static String getTitle(){

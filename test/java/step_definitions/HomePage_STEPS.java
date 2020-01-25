@@ -26,7 +26,7 @@ public class HomePage_STEPS {
 
     @Then("Verifies title is PHPTRAVELS | Travel Technology Partner")
     public void verifies_title_is_PHPTRAVELS_Travel_Technology_Partner() {
-//        Assert.assertEquals("PHPTRAVELS | Travel Technology Partner", driver.getTitle());
+        Assert.assertEquals("PHPTRAVELS | Travel Technology Partner", driver.getTitle());
     }
 
 
