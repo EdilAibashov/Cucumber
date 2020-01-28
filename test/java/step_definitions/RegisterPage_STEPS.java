@@ -12,8 +12,8 @@ public class RegisterPage_STEPS {
     private static WebDriver driver = Driver.getDriver();
     RegisterPage_impl registerPage = new RegisterPage_impl();
 
-    @When("User navigates to Register page")
-    public void user_navigates_to_Register_page() {
+    @When("User navigates to {string} page")
+    public void user_navigates_to_Register_page(String string) {
         registerPage.clickSignUp();
     }
 
@@ -22,13 +22,11 @@ public class RegisterPage_STEPS {
         registerPage.registerNewUser();
     }
 
-    @Then("Verifies title is My Account")
-    public void verifies_title_is_My_Account() {
-        SeleniumUtils.sleep(2000);
-        Assert.assertEquals("My Account",registerPage.getTitle());
-        SeleniumUtils.sleep(5000);
-        Driver.quitDriver();
+    @Then("Verifies title is {string}")
+    public void verifies_title_is_My_Account(String string) {
+        RegisterPage_impl.veriFytile();
     }
 
 }
+
 

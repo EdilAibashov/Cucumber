@@ -1,16 +1,13 @@
 package step_definitions;
 
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import pages.AdminPages.AdminPage;
 import step_definitions.step_impl.AdminPage_impl;
-import step_definitions.step_impl.CouponPage_impl;
 import util.ConfigReader;
 import util.Driver;
-import util.SeleniumUtils;
 
 public class AdminPage_STEPS {
     private static WebDriver driver = Driver.getDriver();
@@ -29,10 +26,4 @@ public class AdminPage_STEPS {
     public void user_verifies_admin_page_title_is_Dashboard() {
         Assert.assertEquals("Dashboard", AdminPage.getTitle());
     }
-
-
-
-
-
-
 }

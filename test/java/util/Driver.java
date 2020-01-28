@@ -2,6 +2,7 @@ package util;
 
 import constants.SeleniumConstants;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -53,5 +54,11 @@ public class Driver {
                 return driver;
             initialize(ConfigReader.readProperty("browser"));
             return driver;
+        }
+        public static void AlertMsg(){
+            Alert alert = driver.switchTo().alert();
+            System.out.println(driver.switchTo().alert().getText());
+            driver.switchTo().alert().accept();
+
         }
     }

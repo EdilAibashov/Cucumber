@@ -2,7 +2,6 @@ package step_definitions.step_impl;
 
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
-import pages.AdminPages.AdminPage;
 import pages.AdminPages.CouponPage;
 import testData.CouponInfo;
 import util.Driver;

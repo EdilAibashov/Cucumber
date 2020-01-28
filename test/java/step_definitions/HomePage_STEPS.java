@@ -3,9 +3,12 @@ package step_definitions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.After;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import pages.HomePage;
+import step_definitions.step_impl.AdminPage_impl;
+import step_definitions.step_impl.HomePage_impl;
 import util.ConfigReader;
 import util.Driver;
 import util.SeleniumUtils;
@@ -26,7 +29,7 @@ public class HomePage_STEPS {
 
     @Then("Verifies title is PHPTRAVELS | Travel Technology Partner")
     public void verifies_title_is_PHPTRAVELS_Travel_Technology_Partner() {
-        Assert.assertEquals("PHPTRAVELS | Travel Technology Partner", driver.getTitle());
+        HomePage_impl.verifyTitle();
     }
 
 

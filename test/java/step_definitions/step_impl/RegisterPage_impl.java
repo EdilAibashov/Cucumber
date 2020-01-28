@@ -1,5 +1,6 @@
 package step_definitions.step_impl;
 
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import pages.HomePage;
 import pages.RegisterPage;
@@ -35,8 +36,14 @@ public class RegisterPage_impl {
         SeleniumUtils.click(registerPage.signUp_Btn);
     }
 
-    public String getTitle(){
+    public static String getTitle(){
         return driver.getTitle();
+    }
+    public static void veriFytile(){
+        SeleniumUtils.sleep(2000);
+        Assert.assertEquals("My Account",RegisterPage_impl.getTitle());
+        SeleniumUtils.sleep(5000);
+        Driver.quitDriver();
     }
 
 }
