@@ -61,7 +61,7 @@ public class NewUserInfo {
         setLastName(faker.name().lastName());
         setFirstName(faker.name().firstName());
         setPassword(getFirstName() + getLastName() + "123#");
-        setEmail(getFirstName()+"."+getLastName()+"@zzz.com");
+        setEmail(getFirstName()+"."+getLastName()+"@gmail.com");
     }
 
 

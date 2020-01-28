@@ -3,5 +3,5 @@ Feature: Home page Testing
   @titleTest
   Scenario: Verifies title of Home Page
     Given User opens home page
-    When User sees My Account button
-    When Verifies title is PHPTRAVELS | Travel Technology Partner
+    When Verify title is "My Store"
+

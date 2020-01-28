@@ -7,6 +7,6 @@ import util.Driver;
 public class HomePage_impl {
     private static WebDriver driver = Driver.getDriver();
     public static void verifyTitle(){
-        Assert.assertEquals("PHPTRAVELS | Travel Technology Partner", driver.getTitle());
+        Assert.assertEquals(driver.getTitle(), "My Store");
     }
 }

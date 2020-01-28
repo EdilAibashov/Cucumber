@@ -19,18 +19,10 @@ public class HomePage_STEPS {
 
     @Given("User opens home page")
     public void user_opens_home_page() {
-        Driver.getDriver().get(ConfigReader.readProperty("url"));
+//        Driver.getDriver().get(ConfigReader.readProperty("url"));
     }
-
-    @When("User sees My Account button")
-    public void user_sees_My_Account_button() {
-        SeleniumUtils.waitForVisibilityOfElement(homePage.myAccount_Btn);
+    @When("Verify title is {string}")
+    public void verify_title_is(String string) {
+      HomePage_impl.verifyTitle();
     }
-
-    @Then("Verifies title is PHPTRAVELS | Travel Technology Partner")
-    public void verifies_title_is_PHPTRAVELS_Travel_Technology_Partner() {
-        HomePage_impl.verifyTitle();
-    }
-
-
 }
